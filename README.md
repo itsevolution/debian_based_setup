@@ -54,7 +54,7 @@ sudo -i R
 > if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 > BiocManager::install()
-
+```
 [*units* package](https://github.com/r-quantities/units)
 ```
 sudo apt-get install libudunits2-dev
@@ -66,7 +66,7 @@ sudo apt-get update
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 
 sudo -i R
-```
+
 > require(devtools)
 > install.packages('units')
 > install.packages('sf')
@@ -74,6 +74,7 @@ After installing this packages, other dependencies will install automatically.
 > install.packages('adegenet')
 > install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
 > install_github("dwinter/mmod")
+```
 
 Download RStudio (IDE)
 ```
