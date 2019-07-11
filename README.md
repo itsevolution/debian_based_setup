@@ -1,5 +1,5 @@
 # ubuntu_setup
-Things that I do to prepare my computer for bioinformatics :octocat: (and gamming :space_invader:)
+Things that I do to prepare my computer for gamming and bioinformatics.
 
 Current: Ubuntu 18.04 4.18.0-25-generic x86_64 
 
@@ -31,7 +31,7 @@ Installing R 3.6.1
 $ sudo apt update
 $ sudo apt install r-base r-base-dev
 
-Installing packages and dependencies for genetic analyses on Ubuntu 18.04, recomended by Grunwald lab [https://grunwaldlab.github.io/]
+Installing packages and dependencies for genetic analyses on Ubuntu 18.04, recomended by [Grunwald lab](https://grunwaldlab.github.io/)
 
 Install 'devtools' and 'bioconductor' packages
 
@@ -42,10 +42,10 @@ $ sudo -i R
     install.packages("BiocManager")
 BiocManager::install()
 
-'units' package [https://github.com/r-quantities/units]
+['units' package](https://github.com/r-quantities/units)
 $ sudo apt-get install libudunits2-dev
 
-'sf' package [https://github.com/r-spatial/sf]
+['sf' package](https://github.com/r-spatial/sf)
 $ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 $ sudo apt-get update
 $ sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
