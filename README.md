@@ -3,7 +3,7 @@ Things that I do to prepare my computer for gamming and bioinformatics.
 
 Current: Ubuntu 18.04 4.18.0-25-generic x86_64 
 
-```bash
+```
 sudo apt update
 sudo apt upgrade
 ```
@@ -45,11 +45,9 @@ sudo apt install r-base r-base-dev
 Installing packages and dependencies for genetic analyses on Ubuntu 18.04, recomended by [Grunwald lab](https://grunwaldlab.github.io/)
 
 Install *devtools* and *bioconductor* packages
-
 ```
 sudo apt install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
 sudo -i R
-```
 > install.packages(*devtools*)
 > if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -64,13 +62,11 @@ sudo apt-get install libudunits2-dev
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
-
 sudo -i R
-
 > require(devtools)
 > install.packages('units')
 > install.packages('sf')
-After installing this packages, other dependencies will install automatically.
+# After installing this packages, other dependencies will install automatically.
 > install.packages('adegenet')
 > install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
 > install_github("dwinter/mmod")
