@@ -1,24 +1,13 @@
 # ubuntu_setup
-Things that I do to prepare my computer for gamming and bioinformatics.
+This is how I setup my computer for bioinformatics and personal usage.
 
-Current: Ubuntu 18.04 4.18.0-25-generic x86_64 
+Current: Ubuntu 18.04 4.18.0-25-generic
 
+Installing Git, Synaptic package manager, htop monitor and Gdebi installation manager
 ```
-sudo apt update
-sudo apt upgrade
-```
-
-Install Synaptic package manager
-```
+sudo apt-get install git
 sudo apt install synaptic
-```
-Install Gdebi for debian installation manager
-```
 sudo apt install gdebi-core
-```
-
-Install htop monitor
-```
 sudo apt install htop
 ```
 
@@ -36,8 +25,10 @@ sudo apt update
 sudo apt install nvidia-XXX  #current 390
 ```
 
-Installing R 3.6.1
+Installing R (current 3.6.1)
 ```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
 sudo apt update
 sudo apt install r-base r-base-dev
 ```
@@ -63,6 +54,7 @@ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 ```
+Installing packages
 ```
 sudo -i R
 > require(devtools)
