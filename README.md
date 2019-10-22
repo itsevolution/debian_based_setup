@@ -90,8 +90,8 @@ sudo ln -s /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zoter
 
 ## Install QGIS LTR 
 ```
-sudo sh -c 'echo "deb http://qgis.org/debian-ltr bionic main" >> /etc/apt/sources.list'
-sudo sh -c 'echo "deb-src http://qgis.org/debian-ltr bionic main" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb-src http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
 
 wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
 gpg --fingerprint 51F523511C7028C3
