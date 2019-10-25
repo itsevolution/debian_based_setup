@@ -87,6 +87,10 @@ To add Zotero on Applications tab
 ```
 sudo ln -s /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
 ```
+Open as root
+```
+sudo zotero
+```
 
 ## Install QGIS LTR 
 ```
