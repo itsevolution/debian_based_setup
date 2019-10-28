@@ -85,7 +85,8 @@ sudo apt-get update
 ```
 To add Zotero on Applications tab
 ```
-sudo ln -s /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
+sudo ln -s /opt/Zotero-5.0.76_linux-x86_64/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
+
 ```
 Open as root
 ```
