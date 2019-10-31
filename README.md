@@ -72,6 +72,75 @@ cd ~/Downloads
 sudo gdebi rstudio-XXX.deb
 ```
 
+## Install iPyrad
+Follow the instructions at [iPyrad.docs](https://ipyrad.readthedocs.io/en/latest/3-installation.html).
+
+## Install Stacks
+Download [Stacks](http://catchenlab.life.illinois.edu/stacks/) and extract.
+```
+tar xfvz stacks-2.xx.tar.gz
+cd stacks-2.xx
+./configure
+make -j 8 #number of processors available 
+sudo make install
+
+```
+## Install samtools, bcftools and htslib (following [Biostars](https://www.biostars.org/p/328831/) tutorial)
+
+```
+sudo apt-get update
+sudo apt-get install gcc
+sudo apt-get install make
+sudo apt-get install libbz2-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install libncurses5-dev 
+sudo apt-get install libncursesw5-dev
+sudo apt-get install liblzma-dev
+```
+# Install HTSLIB
+```
+cd /usr/bin
+wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar.bz2
+tar -vxjf htslib-1.9.tar.bz2
+cd htslib-1.9
+make
+```
+# Install SAMTOOLS
+cd ..
+wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+tar -vxjf samtools-1.9.tar.bz2
+cd samtools-1.9
+make
+```
+# Install BCFTools
+cd ..
+wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
+tar -vxjf bcftools-1.9.tar.bz2
+cd bcftools-1.9
+make
+```
+```
+Export To Path And Refresh
+export PATH="$PATH:/usr/bin/bcftools-1.9"
+export PATH="$PATH:/usr/bin/samtools-1.9"
+export PATH="$PATH:/usr/bin/htslib-1.9"
+source ~/.profile
+```
+
+## Install QGIS LTR 
+```
+sudo sh -c 'echo "deb http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb-src http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
+
+wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
+gpg --fingerprint 51F523511C7028C3
+gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
+
+sudo apt-get update
+sudo apt-get install qgis qgis-plugin-grass
+
+```
+
 ## Install Zotero reference manager
 
 Download [Zotero](https://www.zotero.org/download/) and extract.
@@ -92,21 +161,7 @@ Open as root
 ```
 sudo zotero
 ```
-
-## Install QGIS LTR 
-```
-sudo sh -c 'echo "deb http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
-sudo sh -c 'echo "deb-src http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
-
-wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
-gpg --fingerprint 51F523511C7028C3
-gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
-
-sudo apt-get update
-sudo apt-get install qgis qgis-plugin-grass
-
-```
-
+# to install [qnotero](http://www.cogsci.nl/qnotero)
 
 ## Install Tweak tools for  
 ```
@@ -123,5 +178,5 @@ sudo gdebi steam.deb
 ```
 
 ## Install programs via Snap
-> Skype, spotify, whatsapp.desktop, etc.. check the list.
+> Skype, spotify, whatsapp.desktop, Discord, etc.. check the list.
 
