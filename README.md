@@ -10,12 +10,23 @@ sudo apt install synaptic
 sudo apt install gdebi-core
 sudo apt install htop
 ```
+## Install Java Development Kit builds
+```
+sudo apt-get install openjdkXXXXXXXXXXXXXXXXXXXXX
+```
 
 ## Install media codecs and addons
 ```
 sudo apt install ubuntu-restricted-extras
 sudo apt install ubuntu-restricted-addons
 sudo apt install vlc
+```
+
+## Intel(R) Graphics Compute Runtime for OpenCL(TM) drivers
+```
+add-apt-repository ppa:intel-opencl/intel-opencl
+apt-get update
+apt-get install intel-opencl-icd
 ```
 
 ## NVidia_GTX_1050 driver
@@ -71,6 +82,21 @@ Download RStudio (IDE)
 cd ~/Downloads
 sudo gdebi rstudio-XXX.deb
 ```
+## Install VCFTools
+```
+git clone https://github.com/vcftools/vcftools.git
+cd vcftools
+./autogen.sh
+./configure
+make
+make install
+```
+## Install ANGSD
+```
+git clone https://github.com/samtools/htslib.git
+git clone https://github.com/ANGSD/angsd.git 
+cd htslib;make;cd ../angsd ;make HTSSRC=../htslib
+```
 
 ## Install iPyrad
 Follow the instructions at [iPyrad.docs](https://ipyrad.readthedocs.io/en/latest/3-installation.html).
@@ -106,6 +132,7 @@ cd htslib-1.9
 make
 ```
 # Install SAMTOOLS
+```
 cd ..
 wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
 tar -vxjf samtools-1.9.tar.bz2
@@ -113,6 +140,7 @@ cd samtools-1.9
 make
 ```
 # Install BCFTools
+```
 cd ..
 wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
 tar -vxjf bcftools-1.9.tar.bz2
@@ -125,6 +153,17 @@ export PATH="$PATH:/usr/bin/bcftools-1.9"
 export PATH="$PATH:/usr/bin/samtools-1.9"
 export PATH="$PATH:/usr/bin/htslib-1.9"
 source ~/.profile
+```
+
+## Install [VSEARCH](https://github.com/torognes/vsearch)
+```
+wget https://github.com/torognes/vsearch/archive/vXXXXXXXX.tar.gz
+tar xzf vXXXXXXXX.tar.gz
+cd vsearch-vXXXXXXXX
+./autogen.sh
+./configure
+make
+make install  # as root or sudo make install
 ```
 
 ## Install QGIS LTR 
