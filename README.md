@@ -3,16 +3,26 @@ This is how I setup my computer for bioinformatics and personal usage.
 
 Current: Ubuntu 18.04 4.18.0-25-generic
 
-## Installing Git, Synaptic package manager, htop monitor and Gdebi installation manager
+## NVidia_GTX_1050 driver
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-driver-XXX  #current 440
+sudo reboot
+```
+if Ubuntu freezes after installation, try the solution of [Mari Linhares](https://gist.github.com/mari-linhares/cef4cb3440408e44963d1447a7db5ae0)
+
+## Installing Git, Gdebi installation manager and htop monitor
 ```
 sudo apt-get install git
-sudo apt install synaptic
-sudo apt install gdebi-core
+sudo apt install gdebi-core #or via GUI
 sudo apt install htop
 ```
 ## Install Java Development Kit builds
 ```
-sudo apt-get install openjdkXXXXXXXXXXXXXXXXXXXXX
+sudo apt install default-jdk
+
+java -version
 ```
 
 ## Install media codecs and addons
@@ -24,16 +34,9 @@ sudo apt install vlc
 
 ## Intel(R) Graphics Compute Runtime for OpenCL(TM) drivers
 ```
-add-apt-repository ppa:intel-opencl/intel-opencl
-apt-get update
-apt-get install intel-opencl-icd
-```
-
-## NVidia_GTX_1050 driver
-```
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:intel-opencl/intel-opencl
 sudo apt update
-sudo apt install nvidia-XXX  #current 390
+sudo apt install intel-opencl-icd
 ```
 
 ## Installing R (current 3.6.1)
@@ -62,8 +65,8 @@ sudo apt-get install libudunits2-dev
 [*sf* package](https://github.com/r-spatial/sf)
 ```
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-sudo apt-get update
-sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
+sudo apt update
+sudo apt install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 ```
 Installing packages
 ```
@@ -71,7 +74,7 @@ sudo -i R
 > require(devtools)
 > install.packages('units')
 > install.packages('sf')
-# After installing this packages, other dependencies will install automatically.
+# After installing this packages, other dependencies will be installed automatically.
 > install.packages('adegenet')
 > install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
 > install_github("dwinter/mmod")
