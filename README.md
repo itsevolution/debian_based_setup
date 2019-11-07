@@ -76,6 +76,11 @@ sudo -i R
 > install.packages('sf')
 # After installing this packages, other dependencies will be installed automatically.
 > install.packages('adegenet')
+
+sudo apt install sublime-text #took the opportunity to install a text editor
+sudo apt install texlive-latex-extra #LaTeX is needed to generate package vignettes
+sudo apt install texinfo
+
 > install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
 > install_github("dwinter/mmod")
 ```
