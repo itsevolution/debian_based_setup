@@ -14,9 +14,7 @@ if Ubuntu freezes after installation, try the solution of [Mari Linhares](https:
 
 ## Installing Git, Gdebi installation manager and htop monitor
 ```
-sudo apt-get install git
-sudo apt install gdebi-core #or via GUI
-sudo apt install htop
+sudo apt install git gdebi-core htop
 ```
 ## Install Java Development Kit builds
 ```
@@ -60,7 +58,7 @@ sudo -i R
 ```
 [*units* package](https://github.com/r-quantities/units)
 ```
-sudo apt-get install libudunits2-dev
+sudo apt install libudunits2-dev
 ```
 [*sf* package](https://github.com/r-spatial/sf)
 ```
@@ -123,14 +121,15 @@ sudo make install
 ## Install samtools, bcftools and htslib (following [Biostars](https://www.biostars.org/p/328831/) tutorial)
 
 ```
-sudo apt-get update
-sudo apt-get install gcc
-sudo apt-get install make
-sudo apt-get install libbz2-dev
-sudo apt-get install zlib1g-dev
-sudo apt-get install libncurses5-dev 
-sudo apt-get install libncursesw5-dev
-sudo apt-get install liblzma-dev
+sudo apt update
+sudo apt install gcc
+sudo apt install make
+sudo apt install libbz2-dev
+sudo apt install zlib1g-dev
+sudo apt install libncurses5-dev
+sudo apt install libncursesw5-dev
+sudo apt install liblzma-dev
+
 ```
 # Install HTSLIB
 ```
@@ -184,8 +183,8 @@ wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
 gpg --fingerprint 51F523511C7028C3
 gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
 
-sudo apt-get update
-sudo apt-get install qgis qgis-plugin-grass
+sudo apt update
+sudo apt install qgis qgis-plugin-grass
 
 ```
 
@@ -197,7 +196,7 @@ Download [Zotero](https://www.zotero.org/download/) and extract.
 sudo mv Zotero_linux-x86_64 /opt
 sudo ln -s /opt/Zotero_linux-x86_64/zotero /usr/bin/zotero
 sudo add-apt-repository ppa:smathot/cogscinl
-sudo apt-get update 
+sudo apt update 
 
 ```
 To add Zotero on Applications tab
