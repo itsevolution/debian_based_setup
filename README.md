@@ -66,10 +66,6 @@ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt update
 sudo apt install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 
-sudo apt install sublime-text #took the opportunity to install a text editor
-sudo apt install texlive-latex-extra #LaTeX is needed to generate vignettes
-sudo apt install texinfo
-
 ```
 Installing packages
 ```
@@ -226,4 +222,12 @@ sudo gdebi steam.deb
 
 ## Install programs via Snap
 > Skype, spotify, whatsapp.desktop, Discord, etc.. check the list.
+
+# Install Subl Text 3
+```
+sudo apt install sublime-text #took the opportunity to install a text editor
+sudo apt install texlive-latex-extra #LaTeX is needed to generate vignettes
+sudo apt install texinfo
+
+```
 
