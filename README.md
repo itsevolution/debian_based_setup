@@ -76,7 +76,7 @@ sudo -i R
 # After installing this packages, other dependencies will be installed automatically.
 > install.packages('adegenet')
 
-> install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
+> devtools::install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
 > install_github("dwinter/mmod")
 ```
 
