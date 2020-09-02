@@ -211,6 +211,15 @@ sudo zotero
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 ```
+## tema
+```
+apt search arc-theme
+sudo apt install arc-theme 
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt install papirus-icon-theme 
+```
+
+
 # Install Steam from official package
 ```
 sudo dpkg --add-architecture i386
