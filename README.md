@@ -1,4 +1,4 @@
-# ubuntu_setup
+# debian_based_setup
 This is how I setup my computer for bioinformatics and personal usage.
 
 Current: Ubuntu 18.04 4.18.0-25-generic
@@ -211,7 +211,7 @@ sudo zotero
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 ```
-## tema
+## themes
 ```
 apt search arc-theme
 sudo apt install arc-theme 
