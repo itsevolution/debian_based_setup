@@ -1,9 +1,9 @@
 # debian_based_setup
 This is how I setup my computer for bioinformatics and personal usage.
 
-Current: Ubuntu 18.04 4.18.0-25-generic
+Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic
 
-## NVidia_GTX_1050 driver
+## NVidia_GTX_1050 driver (for Ubuntu)
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
