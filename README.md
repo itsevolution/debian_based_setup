@@ -1,24 +1,19 @@
 # debian_based_setup
 This is how I setup my computer for bioinformatics and personal usage.
 
-Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic
+Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic (NVIDIA)
 
-## NVidia_GTX_1050 driver (for Ubuntu)
+## [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) + [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) + [spaceship](https://github.com/denysdovhan/spaceship-prompt) 
+then I increase the history size and ignore command duplications
 ```
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt install nvidia-driver-XXX  #current 440
-sudo reboot
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+setopt HIST_IGNORE_ALL_DUPS
 ```
-if Ubuntu freezes after installation, try the solution of [Mari Linhares](https://gist.github.com/mari-linhares/cef4cb3440408e44963d1447a7db5ae0)
 
-## Installing Git, Gdebi installation manager and htop monitor
-```
-sudo apt install git gdebi-core htop
-```
 ## Install Java Development Kit builds
 ```
-sudo apt install default-jdk
+sudo apt install default-jre default-jdk
 
 java -version
 ```
@@ -36,6 +31,14 @@ sudo add-apt-repository ppa:intel-opencl/intel-opencl
 sudo apt update
 sudo apt install intel-opencl-icd
 ```
+## NVidia_GTX_1050 driver (for Ubuntu)
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-driver-XXX  #current 455.28
+sudo reboot
+```
+if Ubuntu freezes after installation, try the solution of [Mari Linhares](https://gist.github.com/mari-linhares/cef4cb3440408e44963d1447a7db5ae0)
 
 ## Installing R (current 3.6.1)
 ```
