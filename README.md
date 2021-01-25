@@ -49,8 +49,9 @@ sudo apt install r-base r-base-dev
 ```
 
 Installing packages and dependencies for genetic analyses on Ubuntu 18.04, recomended by [Grunwald lab](https://grunwaldlab.github.io/)
-
+```
 sudo apt install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+```
 
 [*units* package - r-quantities](https://github.com/r-quantities/units)
 ```
@@ -68,17 +69,17 @@ Installing packages
 Install *devtools* and *bioconductor* packages
 ```
 sudo -i R
-> install.packages("devtools")
-> if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("devtools")
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-> BiocManager::install() #for package installation 
-> install.packages('units')
-> install.packages('sf')
+BiocManager::install() #for package installation 
+install.packages('units')
+install.packages('sf')
 # After installing this packages, other dependencies will be installed automatically.
-> install.packages('adegenet')
-> require(devtools)
-> devtools::install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
-> install_github("dwinter/mmod")
+install.packages('adegenet')
+require(devtools)
+devtools::install_github(repo = "grunwaldlab/poppr", build_vignettes = TRUE)
+install_github("dwinter/mmod")
 ```
 
 Download RStudio (IDE)
