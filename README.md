@@ -1,5 +1,6 @@
 # debian_based_setup
 This is how I setup my computer for bioinformatics and personal usage.
+I really like [Willi Mutschler's guides](https://mutschler.eu/linux/install-guides/]
 
 Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic (NVIDIA)
 
@@ -27,8 +28,6 @@ sudo apt install vlc
 
 ## Intel(R) Graphics Compute Runtime for OpenCL(TM) drivers
 ```
-sudo add-apt-repository ppa:intel-opencl/intel-opencl
-sudo apt update
 sudo apt install intel-opencl-icd
 ```
 ## NVidia_GTX_1050 driver (for Ubuntu)
@@ -96,11 +95,14 @@ cd vcftools
 make
 make install
 ```
-## Install ANGSD
+
+## install ANGSD: Analysis of next generation Sequencing Data 
 ```
-git clone https://github.com/samtools/htslib.git
-git clone https://github.com/ANGSD/angsd.git 
-cd htslib;make;cd ../angsd ;make HTSSRC=../htslib
+wget http://popgen.dk/software/download/angsd/angsd0.930.tar.gz
+tar xf angsd0.930.tar.gz 
+cd htslib/;make;cd ..
+cd angsd/
+make HTSSRC=../htslib
 ```
 
 ## Install iPyrad
@@ -121,25 +123,21 @@ sudo make install
 ```
 sudo apt update
 sudo apt install gcc
-sudo apt install make
-sudo apt install libbz2-dev
-sudo apt install zlib1g-dev
-sudo apt install libncurses5-dev
-sudo apt install libncursesw5-dev
-sudo apt install liblzma-dev
+sudo apt install make libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev liblzma-dev
 
 ```
 # Install HTSLIB
 ```
-cd /usr/bin
-wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar.bz2
-tar -vxjf htslib-1.9.tar.bz2
-cd htslib-1.9
+git clone https://github.com/samtools/htslib.git
+cd htslib
+git submodule update --init --recursive
+autoreconf -i
+./configure
 make
+sudo make install
 ```
 # Install SAMTOOLS
 ```
-cd ..
 wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
 tar -vxjf samtools-1.9.tar.bz2
 cd samtools-1.9
