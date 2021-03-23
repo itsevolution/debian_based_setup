@@ -232,11 +232,9 @@ sudo gdebi steam.deb
 ## Install programs via Snap
 > Skype, spotify, whatsapp.desktop, Discord, etc.. check the list.
 
-# Install Subl Text 3
+# Install Visual Studio Code
 ```
-sudo apt install sublime-text #took the opportunity to install a text editor
-sudo apt install texlive-latex-extra #LaTeX is needed to generate vignettes
-sudo apt install texinfo
+sudo apt install code
 
 ```
 
