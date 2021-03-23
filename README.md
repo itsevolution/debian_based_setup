@@ -235,6 +235,5 @@ sudo gdebi steam.deb
 # Install Visual Studio Code
 ```
 sudo apt install code
-
 ```
 
