@@ -4,7 +4,8 @@ I really like [Willi Mutschler's guides](https://mutschler.eu/linux/install-guid
 
 Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic (NVIDIA)
 
-## [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) + [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) + [spaceship](https://github.com/denysdovhan/spaceship-prompt) 
+## bash with [Startship](https://starship.rs/)
+
 then I increase the history size and ignore command duplications
 ```
 export HISTFILESIZE=1000000000
@@ -39,7 +40,12 @@ sudo reboot
 ```
 if Ubuntu freezes after installation, try the solution of [Mari Linhares](https://gist.github.com/mari-linhares/cef4cb3440408e44963d1447a7db5ae0)
 
-## Installing R (current 3.6.1)
+## Install Vim and Sublime
+```
+sudo apt install vim sublime-text latexmk biber
+```
+
+## [Installing R](https://cran.r-project.org/)
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
@@ -86,24 +92,10 @@ Download RStudio (IDE)
 cd ~/Downloads
 sudo gdebi rstudio-XXX.deb
 ```
-## Install VCFTools
-```
-git clone https://github.com/vcftools/vcftools.git
-cd vcftools
-./autogen.sh
-./configure
-make
-make install
-```
 
-## install ANGSD: Analysis of next generation Sequencing Data 
-```
-wget http://popgen.dk/software/download/angsd/angsd0.930.tar.gz
-tar xf angsd0.930.tar.gz 
-cd htslib/;make;cd ..
-cd angsd/
-make HTSSRC=../htslib
-```
+## Install packages via Conda
+
+bcftools htslib cutadapt plink vcftools raxml
 
 ## Install iPyrad
 Follow the instructions at [iPyrad.docs](https://ipyrad.readthedocs.io/en/latest/3-installation.html).
@@ -120,45 +112,6 @@ sudo make install
 ```
 ## Install samtools, bcftools and htslib (following [Biostars](https://www.biostars.org/p/328831/) tutorial)
 
-```
-sudo apt update
-sudo apt install gcc
-sudo apt install make libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev liblzma-dev
-
-```
-# Install HTSLIB
-```
-git clone https://github.com/samtools/htslib.git
-cd htslib
-git submodule update --init --recursive
-autoreconf -i
-./configure
-make
-sudo make install
-```
-# Install SAMTOOLS
-```
-wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
-tar -vxjf samtools-1.9.tar.bz2
-cd samtools-1.9
-make
-```
-# Install BCFTools
-```
-cd ..
-wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
-tar -vxjf bcftools-1.9.tar.bz2
-cd bcftools-1.9
-make
-```
-```
-Export To Path And Refresh
-export PATH="$PATH:/usr/bin/bcftools-1.9"
-export PATH="$PATH:/usr/bin/samtools-1.9"
-export PATH="$PATH:/usr/bin/htslib-1.9"
-source ~/.profile
-```
-
 ## Install [VSEARCH](https://github.com/torognes/vsearch)
 ```
 wget https://github.com/torognes/vsearch/archive/vXXXXXXXX.tar.gz
@@ -170,19 +123,9 @@ make
 make install  # as root or sudo make install
 ```
 
-## Install QGIS LTR 
-```
-sudo sh -c 'echo "deb http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
-sudo sh -c 'echo "deb-src http://qgis.org/ubuntu-ltr bionic main" >> /etc/apt/sources.list'
+## Install QGIS
 
-wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
-gpg --fingerprint 51F523511C7028C3
-gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
-
-sudo apt update
-sudo apt install qgis qgis-plugin-grass
-
-```
+[QGIS LTR for Debian-ubuntu](https://www.qgis.org/en/site/forusers/alldownloads.html#debian-ubuntu)
 
 ## Install Zotero reference manager
 
@@ -198,10 +141,6 @@ sudo apt update
 To add Zotero on Applications tab
 ```
 sudo ln -s /opt/Zotero-5.0.76_linux-x86_64/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
-
-```
-Open as root
-```
 sudo zotero
 ```
 # to install [qnotero](http://www.cogsci.nl/qnotero)
@@ -219,7 +158,6 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt install papirus-icon-theme 
 ```
 
-
 # Install Steam from official package
 ```
 sudo dpkg --add-architecture i386
@@ -229,11 +167,6 @@ wget http://media.steampowered.com/client/installer/steam.deb
 sudo gdebi steam.deb
 ```
 
-## Install programs via Snap
-> Skype, spotify, whatsapp.desktop, Discord, etc.. check the list.
-
-# Install Visual Studio Code
-```
-sudo apt install code
-```
+## Install other programs 
+spotify, Discord, termdown, cheese etc.. check the list.
 
