@@ -1,6 +1,6 @@
 # debian_based_setup
 This is how I setup my computer for bioinformatics and personal usage.
-I really like [Willi Mutschler's guides](https://mutschler.eu/linux/install-guides/]
+I really like [Willi Mutschler's guides](https://mutschler.eu/linux/install-guides/)
 
 Current: Pop!_OS 20.04 LTS 5.4.0-7642-generic (NVIDIA)
 
